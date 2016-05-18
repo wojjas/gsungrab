@@ -4,17 +4,18 @@
 	var controllerId = 'TrilingualController';
 
 	angular.module('gsungrab')
-		.controller(controllerId, [Trilingual]);
+		.controller(controllerId, ['pdfDelegate', Trilingual]);
 
-	function Trilingual() {
+	function Trilingual(pdfDelegate) {
 		var vm = this;
 
 		vm.activate = activate;
-		vm.title = 'trilingual_controller';
+    vm.pdfUrl = 'resources/kbtri.pdf';
 
 		activate();
 
 		function activate() {
+
 		}
 	}
 })();

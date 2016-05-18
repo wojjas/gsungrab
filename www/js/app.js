@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'gsungrab' is the name of this angular module (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('gsungrab', ['ionic'])
+angular.module('gsungrab', ['ionic', 'pdf'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,7 +22,3 @@ angular.module('gsungrab', ['ionic'])
     }
   });
 })
-
-//.controller('TrilingualController', function ($scope) {
-//  $scope.title = 'This is the controller speaking';
-//})
