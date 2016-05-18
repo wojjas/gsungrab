@@ -22,3 +22,7 @@ angular.module('gsungrab', ['ionic'])
     }
   });
 })
+
+//.controller('TrilingualController', function ($scope) {
+//  $scope.title = 'This is the controller speaking';
+//})
