@@ -4,12 +4,14 @@
 	var controllerId = 'MainController';
 
 	angular.module('gsungrab')
-		.controller(controllerId, ['$scope', 'pdfDelegate', Main]);
+		.controller(controllerId, ['$timeout', 'pdfDelegate', Main]);
 
-	function Main($scope, pdfDelegate) {
+	function Main($timeout, pdfDelegate) {
 		var vm = this;
     var pdfHandler = null;
 
+    vm.currentPage = null;
+    vm.pageCount = null;
     vm.forwardBtn = forwardBtn;
 		vm.backBtn = backBtn;
     vm.zoomOutBtn = zoomOutBtn;
@@ -20,14 +22,24 @@
 
 		function activate() {
       pdfHandler = pdfDelegate.$getByHandle('my-pdf-container');
+
+      //To give child controller time to load.
+      $timeout(function () {
+        vm.currentPage = pdfHandler.getCurrentPage();
+        vm.pageCount = pdfHandler.getPageCount();
+      }, 100);
 		}
 
     function forwardBtn(){
       pdfHandler.next();
+      vm.currentPage = pdfHandler.getCurrentPage();
+      vm.pageCount = pdfHandler.getPageCount();
     }
 
     function backBtn(){
       pdfHandler.prev();
+      vm.currentPage = pdfHandler.getCurrentPage();
+      vm.pageCount = pdfHandler.getPageCount();
     }
 
     function zoomInBtn(){
