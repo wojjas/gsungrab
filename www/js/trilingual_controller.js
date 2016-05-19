@@ -4,7 +4,7 @@
 	var controllerId = 'TrilingualController';
 
 	angular.module('gsungrab')
-		.controller(controllerId, ['pdfDelegate', Trilingual]);
+		.controller(controllerId, [Trilingual]);
 
 	function Trilingual(pdfDelegate) {
 		var vm = this;

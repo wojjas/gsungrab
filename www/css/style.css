@@ -1,1 +1,8 @@
 /* Empty. Add your own CSS if you like */
+
+/* apply to span */
+.align-right {
+  position: absolute;
+  right: 0px;
+  width: 88px;
+}
