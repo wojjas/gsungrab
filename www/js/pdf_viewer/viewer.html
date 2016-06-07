@@ -1,0 +1,26 @@
+<ion-pane>
+  <ion-header-bar class="bar-stable">
+    <div class="">
+      <button ng-click="zoomOut()"><i class="icon ion-minus-round"></i></button>
+      <button ng-click="fit()"><i class="icon ion-search"></i></button>
+      <button ng-click="zoomIn()"><i class="icon ion-plus-round"></i></button>
+      &#xA0;
+      <button ng-click="goPrevious()"><i class="icon ion-chevron-left"></i></button>
+      <!--<input type="tel" min=1 ng-model="pageNum"> / {{pageCount}}-->
+      <!--<input type="tel" ng-model="pageNum"> / {{pageCount}}</span>-->
+      <!--No need to show page numbers as they don't correspond to the table of contents nor to what's on the pages-->
+      <button ng-click="goNext()"><i class="icon ion-chevron-right"></i></button>
+    </div>
+
+  </ion-header-bar>
+  <ion-content>
+    <ion-scroll zooming="true" direction="xy">
+      <canvas id="pdf-canvas"></canvas>
+    </ion-scroll>
+  </ion-content>
+</ion-pane>
+
+
+
+
+

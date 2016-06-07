@@ -1,9 +1,9 @@
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-// 'gsungrab' is the name of this angular module (also set in a <body> attribute in index.html)
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('gsungrab', ['ionic', 'pdf'])
+angular.module('starter', ['ionic', 'pdf'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,3 +22,15 @@ angular.module('gsungrab', ['ionic', 'pdf'])
     }
   });
 })
+
+.controller('MainController', ['$scope', function($scope){
+  var vm = this;
+
+  vm.activate = activate;
+
+  activate();
+
+  function activate(){
+  }
+}])
+
