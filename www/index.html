@@ -18,13 +18,20 @@
   <!-- cordova script (this will be a 404 during development) -->
   <script src="cordova.js"></script>
 
-  <!-- your app's js -->
+  <!-- gsungrabs's js -->
   <script src="lib/pdfjs-dist/build/pdf.js"></script>
   <script src="lib/angular-pdf/dist/angular-pdf.min.js"></script>
+  <!--Common-->
+  <scrip src="js/common/common_module.js"></scrip>
   <script src="js/app.js"></script>
   <script src="js/pdf_viewer/viewer_controller.js"></script>
+  <!--Loading-->
+  <script src="js/common/loading/loading_directive.js"></script>
+  <script src="js/common/loading/loading_controller.js"></script>
+  <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.min.css">
+
 </head>
-<body ng-app="starter">
+<body ng-app="gsungrab">
 
 <div class="wrapper" ng-controller="ViewerController as ViewerCtrl">
   <ng-pdf template-url="js/pdf_viewer/viewer.html" scale="page-fit"></ng-pdf>

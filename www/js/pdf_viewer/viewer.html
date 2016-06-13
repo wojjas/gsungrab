@@ -14,9 +14,14 @@
 
   </ion-header-bar>
   <ion-content>
-    <ion-scroll zooming="true" direction="xy">
-      <canvas id="pdf-canvas"></canvas>
-    </ion-scroll>
+    <loading-message delay="500" message="Loading Document"
+                     is-loading="!ViewerCtrl.isLoaded"></loading-message>
+    <!--<div ng-show="!ViewerCtrl.isLoaded">{{ViewerCtrl.progress}}%</div>-->
+    <div ng-show="ViewerCtrl.isLoaded">
+      <ion-scroll zooming="true" direction="xy">
+        <canvas id="pdf-canvas"></canvas>
+      </ion-scroll>
+    </div>
   </ion-content>
 </ion-pane>
 

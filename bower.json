@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "pdfjs-dist": "^1.5.285",
-    "angular-pdf": "^1.3.0"
+    "angular-pdf": "^1.3.0",
+    "components-font-awesome": "^4.6.3"
   }
 }

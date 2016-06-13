@@ -1,0 +1,13 @@
+<style>
+	.loading-message{
+		color: darkred;
+		font-weight: bold;
+    margin-top: 50px;
+    margin-left: 5px;
+	}
+</style>
+
+<div class="loading-message"
+		ng-if="LoadingCtrl.show()">
+	<h3><i class="fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i> {{LoadingCtrl.message}}</h3>
+</div>
